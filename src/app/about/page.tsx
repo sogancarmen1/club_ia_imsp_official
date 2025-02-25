@@ -2,14 +2,14 @@
 import About from "@/components/about";
 import Feature from "@/components/feature";
 import Team from "@/components/team";
-import Header from "@/components/header";
 import DefaultLayout from "@/components/layouts/DefaultLayouts";
+import HeaderSecond from "@/components/headerSeconde";
 
 export default function AboutPage() {
   return (
     <>
       <DefaultLayout>
-        <Header />
+        <HeaderSecond pageName="About Us" links=""/>
         <About />
         <Feature />
         <Team />

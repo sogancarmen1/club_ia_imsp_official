@@ -1,14 +1,14 @@
 // "use client";
-import Faq from "@/components/faq";
+import Contact from "@/components/contactus";
 import HeaderSecond from "@/components/headerSeconde";
 import DefaultLayout from "@/components/layouts/DefaultLayouts";
 
-export default function FaqPage() {
+export default function ContactusPage() {
   return (
     <>
       <DefaultLayout>
-        <HeaderSecond pageName="FAQs" links=""/>
-        <Faq />
+        <HeaderSecond pageName="Contact Us" links=""/>
+        <Contact/>
       </DefaultLayout>
     </>
   );

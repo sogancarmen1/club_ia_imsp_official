@@ -1,13 +1,13 @@
 // "use client";
 import Team from "@/components/team";
-import Header from "@/components/header";
 import DefaultLayout from "@/components/layouts/DefaultLayouts";
+import HeaderSecond from "@/components/headerSeconde";
 
-export default function ServicePage() {
+export default function TeamPage() {
   return (
     <>
       <DefaultLayout>
-        <Header />
+        <HeaderSecond pageName="Our Team" links=""/>
         <Team />
       </DefaultLayout>
     </>

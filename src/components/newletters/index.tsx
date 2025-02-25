@@ -1,8 +1,24 @@
+"use client";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Newletters() {
+  const [email, setEmail] = useState("");
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    let response: any;
+    try {
+      response = await axios.post("http://localhost:4000/user/email", {
+        email: email,
+      });
+      if (response.data?.sucess == true) {
+        setEmail("");
+      }
+    } catch (error) {}
+  };
   return (
     <div className="container-fluid bg-primary newsletter py-5">
       <div className="container">
@@ -27,10 +43,18 @@ export default function Newletters() {
               Newsletter
             </div>
             <h1 className="text-white mb-4">Let's subscribe the newsletter</h1>
-            <div className="position-relative w-100 mt-3 mb-2">
+            <form
+              onSubmit={handleSubmit}
+              className="position-relative w-100 mt-3 mb-2"
+            >
               <input
                 className="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                type="text"
+                type="email"
+                value={email}
+                onChange={(e: any) => {
+                  setEmail(e.target.value);
+                }}
+                required
                 placeholder="Enter Your Email"
                 height={70}
               />
@@ -44,7 +68,7 @@ export default function Newletters() {
                   width={20}
                 />
               </button>
-            </div>
+            </form>
             <small className="text-white-50">
               Diam sed sed dolor stet amet eirmod
             </small>

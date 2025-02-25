@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -23,12 +24,12 @@ export default function Header() {
             >
               Read More
             </a>
-            <a
-              href=""
+            <Link
+              href="/contactus"
               className="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
           <div className="col-lg-6 align-self-end text-center text-lg-end">
             <Image

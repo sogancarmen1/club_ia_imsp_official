@@ -1,14 +1,14 @@
 // "use client";
-import Faq from "@/components/faq";
+import Header from "@/components/header";
 import HeaderSecond from "@/components/headerSeconde";
 import DefaultLayout from "@/components/layouts/DefaultLayouts";
+import PostPage from "@/components/post";
 
-export default function FaqPage() {
+export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <HeaderSecond pageName="FAQs" links=""/>
-        <Faq />
+        <PostPage texts="Actualités" links="/actualities" />
       </DefaultLayout>
     </>
   );

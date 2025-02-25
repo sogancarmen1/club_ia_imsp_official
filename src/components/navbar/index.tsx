@@ -21,16 +21,19 @@ export default function NavBar() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto">
               <Link href="/" className="nav-item nav-link active">
-                Home
+                Acceuil
               </Link>
               <Link href="/about" className="nav-item nav-link">
-                About
+                A propos
               </Link>
-              <Link href="/service" className="nav-item nav-link">
+              {/* <Link href="/service" className="nav-item nav-link">
                 Services
+              </Link> */}
+              <Link href="/actualities" className="nav-item nav-link">
+                Actualités
               </Link>
               <Link href="/project" className="nav-item nav-link">
-                Projects
+                Projets
               </Link>
               <div className="nav-item dropdown">
                 <a
@@ -50,17 +53,17 @@ export default function NavBar() {
                   <Link href="/faq" className="dropdown-item">
                     FAQs
                   </Link>
-                  <a href="testimonial.html" className="dropdown-item">
+                  {/* <Link href="/testimonial" className="dropdown-item">
                     Testimonial
-                  </a>
-                  <a href="404.html" className="dropdown-item">
+                  </Link> */}
+                  {/* <a href="404.html" className="dropdown-item">
                     404 Page
-                  </a>
+                  </a> */}
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">
+              <Link href="/contactus" className="nav-item nav-link">
                 Contact
-              </a>
+              </Link>
             </div>
             {/* <butaton
                 type="button"
