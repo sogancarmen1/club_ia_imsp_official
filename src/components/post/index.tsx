@@ -37,13 +37,15 @@ const PostPage: React.FC<TitleProps> = ({ texts, links }) => {
         <div className="container px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
             <div className="col-md-10 col-lg-8 col-xl-7">
-              <img
-                className="py-5"
-                width={600}
-                height={400}
-                src={articleFound?.files[0]?.url}
-                alt="image du projet/actualité"
-              />
+              <div className="px-2">
+                <img
+                  className="py-5"
+                  style={{ maxWidth: "100%", height: "auto", display: "block" }}
+                  src={articleFound?.files[0]?.url}
+                  alt="image du projet/actualité"
+                />
+              </div>
+              <span>Publié le {articleFound?.date_publication}</span>
               <div
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(articleFound?.contain),

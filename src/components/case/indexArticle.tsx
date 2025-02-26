@@ -47,13 +47,19 @@ const CaseArticles: React.FC<TitleProps> = ({ numberOfArticle }) => {
                 data-wow-delay="0.3s"
               >
                 <div className="case-item position-relative overflow-hidden rounded mb-2">
-                  <img
-                    width={500}
-                    height={300}
-                    className="img-fluid"
-                    src={value?.files[0]?.url}
-                    alt={value?.files[0]?.original_name}
-                  />
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "200px",
+                      objectFit: "cover",
+                    }}
+                  >
+                    <img
+                      className="img-fluid"
+                      src={value?.files[0]?.url}
+                      alt={value?.files[0]?.original_name}
+                    />
+                  </div>
                   <a className="case-overlay text-decoration-none" href="">
                     <h5 className="lh-base text-white mb-3">{value.title}</h5>
                     <small>Ajouté le {value.date_publication}</small>

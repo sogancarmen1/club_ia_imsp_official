@@ -44,7 +44,7 @@ export default function Newletters() {
             </div>
             <h1 className="text-white mb-4">Let's subscribe the newsletter</h1>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={(e) => handleSubmit(e)}
               className="position-relative w-100 mt-3 mb-2"
             >
               <input
@@ -59,7 +59,7 @@ export default function Newletters() {
                 height={70}
               />
               <button
-                type="button"
+                type="submit"
                 className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
               >
                 <FontAwesomeIcon
