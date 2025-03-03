@@ -11,7 +11,7 @@ export default function Newletters() {
     e.preventDefault();
     let response: any;
     try {
-      response = await axios.post("http://localhost:4000/user/email", {
+      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/email`, {
         email: email,
       });
       if (response.data?.sucess == true) {

@@ -45,13 +45,13 @@ export const DashboardProvider = ({
     const fetchData = async () => {
       try {
         const responseProjects = await axios.get(
-          "http://localhost:4000/articles/project"
+          `${process.env.NEXT_PUBLIC_API_URL}/articles/project`
         );
         // console.log(responseProjects);
         setProjectData(responseProjects.data.data);
 
         const responseArticles = await axios.get(
-          "http://localhost:4000/articles/article"
+          `${process.env.NEXT_PUBLIC_API_URL}/articles/article`
         );
         setArticleData(responseArticles.data.data);
       } catch (error) {

@@ -12,7 +12,7 @@ export default function Contact() {
     e.preventDefault();
     let response: any;
     try {
-      response = await axios.post("http://localhost:4000/user/contactus", {
+      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/contactus`, {
         name: name,
         email: email,
         subject: subject,
