@@ -4,6 +4,7 @@ import HeaderSecond from "../headerSeconde";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import DOMPurify from "dompurify";
+import axios from "axios";
 
 interface TitleProps {
   texts: string;
@@ -14,7 +15,7 @@ const PostPage: React.FC<TitleProps> = ({ texts, links }) => {
   const { projects, articles, articleFound, setArticleFound } = useDashboard();
   const path = usePathname()?.split("/")[1];
   const searchParams = useSearchParams();
-  const lector = searchParams?.get("lire")?.slice(0, 2);
+  const lector = searchParams?.get("lire")?.slice(0, 1);
 
   useEffect(() => {
     if (path == "project") {
